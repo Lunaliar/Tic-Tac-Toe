@@ -1,0 +1,72 @@
+:root{
+    --darkbg:#264653;
+    --lightbg:#2a9d8f;
+    --player1:#e9c46a;
+    --player2:#e76f51;
+    --text:#f4a261;
+}
+
+body{
+    margin:0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkbg);
+    height:100vh;
+    color:var(--text)
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap:1rem
+
+}
+
+.button{
+    background-color: var(--lightbg);
+    height: 5rem;
+    width: 5rem;
+    user-select: none;
+    color:var(--player2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+}
+
+.controls{
+    display: flex;
+    /* border:2px solid var(--text); */
+    border-bottom:.1rem solid var(--text);
+    width: 70%;
+    justify-content: space-evenly;
+    margin:1rem;
+    padding:1rem;
+    align-items: center;
+}
+
+.reset,.switch{
+    border:none;
+    outline: none;
+    background-color: var(--lightbg);
+    border-radius: 1rem;
+    padding:.5rem .75rem;
+    color:var(--text);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.marker{
+    font-size: 2rem;
+}
+
+.active{
+    border-bottom:solid .15rem var(--player1);
+    color: var(--player1);
+}
